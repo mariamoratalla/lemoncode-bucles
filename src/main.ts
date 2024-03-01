@@ -1,3 +1,5 @@
+const estiloApartados = "color: #646cff; font-weight: bold; font-size: 16px";
+
 type Especialidad = "Medico de familia" | "Pediatra" | "Cardiólogo";
 
 interface Pacientes {
@@ -75,10 +77,7 @@ const pacientes: Pacientes[] = [
 ];
 
 /* APARTADO 1 */
-console.log(
-  "%cAPARTADO 1",
-  "color: #646cff; font-weight: bold; font-size: 16px"
-);
+console.log("%cAPARTADO 1", estiloApartados);
 
 /* Extraer la lista de pacientes que están asignados a la especialidad de Pediatría */
 
@@ -123,10 +122,7 @@ console.log(
 );
 
 /* APARTADO 2 */
-console.log(
-  "%cAPARTADO 2",
-  "color: #646cff; font-weight: bold; font-size: 16px"
-);
+console.log("%cAPARTADO 2", estiloApartados);
 
 /* Crear una función que devuelve true si la frecuencia cardíaca es superior a 100ppm y la temperatura corporal superior a 39 grados*/
 
@@ -152,10 +148,7 @@ console.log(
 );
 
 /* APARTADO 3 */
-console.log(
-  "%cAPARTADO 3",
-  "color: #646cff; font-weight: bold; font-size: 16px"
-);
+console.log("%cAPARTADO 3", estiloApartados);
 
 /* Reasignar a los pacientes de Pediatría a Médico de familia */
 
@@ -182,10 +175,7 @@ console.log(
 );
 
 /* APARTADO 4 */
-console.log(
-  "%cAPARTADO 4",
-  "color: #646cff; font-weight: bold; font-size: 16px"
-);
+console.log("%cAPARTADO 4", estiloApartados);
 
 /* Comprobar si hay pacientes en pediatría */
 
@@ -205,10 +195,7 @@ const hayPacientesDePediatria = (pacientes: Pacientes[]): boolean => {
 console.log("¿Hay pacientes en pediatría?", hayPacientesDePediatria(pacientes));
 
 /* APARTADO 5 */
-console.log(
-  "%cAPARTADO 5",
-  "color: #646cff; font-weight: bold; font-size: 16px"
-);
+console.log("%cAPARTADO 5", estiloApartados);
 
 /* Calcular el número de pacientes que hay en la especialidad Medico de familia, Cardiología y Pediatría */
 
