@@ -121,3 +121,32 @@ console.log(
   "Los pacientes asignados a Pediatría y menores de 10 años son: ",
   obtenPacientesAsignadosAPediatriaYMenorDeDiezAnios(pacientes)
 );
+
+/* APARTADO 2 */
+console.log(
+  "%cAPARTADO 2",
+  "color: #646cff; font-weight: bold; font-size: 16px"
+);
+
+/* Crear una función que devuelve true si la frecuencia cardíaca es superior a 100ppm y la temperatura corporal superior a 39 grados*/
+
+const activarProtocoloUrgencia = (pacientes: Pacientes[]): boolean => {
+  let activarProctolo = false;
+
+  for (let i = 0; i < pacientes.length; i++) {
+    if (
+      pacientes[i].frecuenciaCardiaca > 100 &&
+      pacientes[i].temperatura > 39
+    ) {
+      activarProctolo = true;
+      break;
+    }
+  }
+
+  return activarProctolo;
+};
+
+console.log(
+  "¿Se debería activar el protocolo de urgencia?",
+  activarProtocoloUrgencia(pacientes)
+);
