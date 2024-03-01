@@ -203,3 +203,45 @@ const hayPacientesDePediatria = (pacientes: Pacientes[]): boolean => {
 };
 
 console.log("¿Hay pacientes en pediatría?", hayPacientesDePediatria(pacientes));
+
+/* APARTADO 5 */
+console.log(
+  "%cAPARTADO 5",
+  "color: #646cff; font-weight: bold; font-size: 16px"
+);
+
+/* Calcular el número de pacientes que hay en la especialidad Medico de familia, Cardiología y Pediatría */
+
+interface NumeroPacientesPorEspecialidad {
+  medicoDeFamilia: number;
+  pediatria: number;
+  cardiologia: number;
+}
+
+const cuentaPacientesPorEspecialidad = (
+  pacientes: Pacientes[]
+): NumeroPacientesPorEspecialidad => {
+  let numeroPacientesPorEspecialidad: NumeroPacientesPorEspecialidad = {
+    cardiologia: 0,
+    medicoDeFamilia: 0,
+    pediatria: 0,
+  };
+
+  for (let i = 0; i < pacientes.length; i++) {
+    if (pacientes[i].especialidad === "Cardiólogo") {
+      numeroPacientesPorEspecialidad.cardiologia++;
+    }
+
+    if (pacientes[i].especialidad === "Medico de familia") {
+      numeroPacientesPorEspecialidad.medicoDeFamilia++;
+    }
+
+    if (pacientes[i].especialidad === "Pediatra") {
+      numeroPacientesPorEspecialidad.pediatria++;
+    }
+  }
+
+  return numeroPacientesPorEspecialidad;
+};
+
+console.log(cuentaPacientesPorEspecialidad(pacientes));
