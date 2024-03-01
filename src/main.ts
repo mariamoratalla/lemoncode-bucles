@@ -150,3 +150,33 @@ console.log(
   "¿Se debería activar el protocolo de urgencia?",
   activarProtocoloUrgencia(pacientes)
 );
+
+/* APARTADO 3 */
+console.log(
+  "%cAPARTADO 3",
+  "color: #646cff; font-weight: bold; font-size: 16px"
+);
+
+/* Reasignar a los pacientes de Pediatría a Médico de familia */
+
+const reasignaPacientesAMedicoFamilia = (
+  pacientes: Pacientes[]
+): Pacientes[] => {
+  let reasignacionPacientes: Pacientes[] = [...pacientes];
+
+  for (let i = 0; i < pacientes.length; i++) {
+    if (pacientes[i].especialidad === "Pediatra") {
+      reasignacionPacientes[i] = {
+        ...reasignacionPacientes[i],
+        especialidad: "Medico de familia",
+      };
+    }
+  }
+
+  return reasignacionPacientes;
+};
+
+console.log(
+  "Lista de pacientes con la modificación: ",
+  reasignaPacientesAMedicoFamilia(pacientes)
+);
