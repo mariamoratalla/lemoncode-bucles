@@ -177,6 +177,29 @@ const reasignaPacientesAMedicoFamilia = (
 };
 
 console.log(
-  "Lista de pacientes con la modificación: ",
+  "Lista de pacientes actualizada: ",
   reasignaPacientesAMedicoFamilia(pacientes)
 );
+
+/* APARTADO 4 */
+console.log(
+  "%cAPARTADO 4",
+  "color: #646cff; font-weight: bold; font-size: 16px"
+);
+
+/* Comprobar si hay pacientes en pediatría */
+
+const hayPacientesDePediatria = (pacientes: Pacientes[]): boolean => {
+  let pacientesPediatria = false;
+
+  for (let i = 0; i < pacientes.length; i++) {
+    if (pacientes[i].especialidad === "Pediatra") {
+      pacientesPediatria = true;
+      break;
+    }
+  }
+
+  return pacientesPediatria;
+};
+
+console.log("¿Hay pacientes en pediatría?", hayPacientesDePediatria(pacientes));
